@@ -7,7 +7,7 @@ define s = Character('Spymaster', color='#2E8B57')
 init:
     $ povname = ""
     $ pc = DynamicCharacter("povname", kind=nvl, color='#B22222')
-
+    $ flash = Fade(.25, 0, .75, color="#fff")
 
 ## The game starts here.
 
@@ -20,13 +20,19 @@ s "That's a terrible name I'm going to call you 'Pawn'"
 pc "But that's..."
 $ povname = "Pawn"
 s "Silence it's decided!"
-"A strange feeling comes over you, its almost as if you're being possessed.."
+"A strange feeling comes over you, its almost as if your mind..."
 jump area2
 
 label area2:
-"Today, Now."
-"You wake up in the middle of the street. Your home of the last 16 years is on fire."
-"The spymaster has been murdered. The Russian Embassy have attacked."
-menu
-  "" 
+"You stand in the middle of a street.Patchy, distant memories flash before your eyes."
+"You have a vague feeling that a lot of time has passed."
+"The buildings all around you are on fire, one in particular stands out. Was that the acadmy home?"
+"You decide to"
+menu:
+  "Enter the front door of the building.":
+     "The door is blocked and cannot be moved."
+  "Try the back door.":
+    "The door gives way after a firm shove."
+	
+	
 return
