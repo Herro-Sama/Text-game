@@ -7,7 +7,7 @@ define s = Character('Spymaster', color='#2E8B57')
 init:
     $ povname = ""
     $ pc = DynamicCharacter("povname", kind=nvl, color='#B22222')
-
+    $ flash = Fade(.25, 0, .75, color="#fff")
 
 ## The game starts here.
 
