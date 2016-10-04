@@ -2,7 +2,8 @@
 
 ## Declare characters used by this game. The color argument colorizes the name
 ## of the character.
-
+image RusG = "RusGuard.png"
+image SpyM = "SpyMaster.png"
 define s = Character('Spymaster', color='#2E8B57')
 init:
     $ povname = ""
@@ -13,6 +14,7 @@ init:
 
 label start:
 "16 years earlier.."
+show SpyM
 s "Hello, welcome to a world of intrigue."
 $ povname = renpy.input("But tell me what is your name?")
 pc "My name is %(povname)s."
@@ -21,6 +23,7 @@ pc "But that's..."
 $ povname = "Pawn"
 s "Silence it's decided!"
 "A strange feeling comes over you, its almost as if your mind..."
+hide SpyM with flash
 jump area2
 
 label area2:
