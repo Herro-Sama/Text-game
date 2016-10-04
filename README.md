@@ -31,9 +31,11 @@ label area2:
 "You have a vague feeling that a lot of time has passed."
 "The buildings all around you are on fire, one in particular stands out. Was that the acadmy home?"
 "You decide to"
-menu:
-  "Enter the front door of the building.":
+menu Building:
+  "Enter the front door of the building." if FDoor = false:
      "The door is blocked and cannot be moved."
+     $ FDoor = true
+     call Building
   "Try the back door.":
     "The door gives way after a firm shove."
 	
